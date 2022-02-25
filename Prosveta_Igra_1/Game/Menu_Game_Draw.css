@@ -1,9 +1,0 @@
-#questionaire{
-    visibility: hidden;
-    position: absolute;
-    top: 200;
-    left: 700;
-    height: 300;
-    width: 300;
-    background-color: red;
-}
