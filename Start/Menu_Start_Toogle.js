@@ -1,11 +1,11 @@
 let menuStart = document.getElementById("start");
 let menuExit = document.getElementById("exit");
-let menuGame = document.getElementById("questionaire");
+let menuGame = document.getElementById("gameMenu");
 
 function playYes(){
     if(littleMenu == "nothing"){
         menu = "game";
-        menuStart.style.visibility = "hidden";    
+        menuStart.style.visibility = "hidden"; 
         menuGame.style.visibility = "visible";
     }
 }
