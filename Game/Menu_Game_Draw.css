@@ -44,6 +44,14 @@
     position: absolute;
     top: 370;
     left: 450;
+    border: 5px solid purple;
+}
+
+#questionaire{
+    position: absolute;
+    top: 200;
+    left: 700;
+    height: 300;
     width: 300;
     height: 50;
     border: 5px solid orange;
