@@ -5,22 +5,23 @@ body{
     margin: 0;
 }
 
-#start{
+/*#start{
     position: absolute;
     top: 0;
     left: 0; 
     width: 100%;
     height: 100%;
-
-}
+}*/
 
 #bg{
+    position: absolute;
     border: 5px solid chocolate;
+    background: transparent;
+    position: fixed;
     top: 0;
     left: 0;
     width: 800;
     height: 600;
-    z-index: 3;
 }
 
 #title{
@@ -75,9 +76,11 @@ body{
     position: absolute;
 }
 
+
+
 #credits{
     border: 5px solid orange;
-    left: 497.5;
+    left: 498;
     top: 530.5;
     width: 300;
     height: 72.5;
@@ -86,12 +89,12 @@ body{
     align-items: center;
     display: flex;
     position: absolute;
-    z-index: 1
+    z-index: -1;
 }
 
 #dropmenu{
     border: 5px solid orange;
-    left: 497.5;
+    left: 498;
     top: 495;
     width: 300;
     height: 30;
@@ -100,7 +103,7 @@ body{
     align-items: center;
     display: flex;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
 }
 
 #arrow1, #arrow2, #arrow3{
@@ -154,12 +157,12 @@ body{
     top: 610;
     width: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: 1000;
     position: absolute;
 }
 
 table, td{
-    z-index: 1;
+    z-index: -1;
     border: 5px solid orange;
 }
 
@@ -216,4 +219,11 @@ td{
     width: 100;
     height: 50;
     position: absolute;
+}
+
+#gameMenu{
+    width: 800;
+    height: 600;
+    position: absolute
+    border;
 }
