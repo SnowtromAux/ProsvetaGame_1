@@ -1,6 +1,6 @@
 //Main Coordinates
-let startPosX = 100, startPosY = 100;
-let width = 50, height = 50;
+let startPosX = 50, startPosY = 195;
+let width = 365/6, height = 365/6;
 let color = "gray";
 let borderColor = "black", borderWidth = 5;
 let fieldCount = 6;

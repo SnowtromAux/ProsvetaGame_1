@@ -5,6 +5,45 @@
     left: 0;
     width: 800;
     height: 600;
+    border: 5px solid chocolate;
+}
+
+#gameTitle{
+    border: 5px solid green;
+    top: 40;
+    left: 200;
+    width: 400;
+    height: 80;
+    font-size: 75px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+}
+
+#questionaire{
+    position: absolute;
+    top: 440;
+    left: 450;
+    height: 110;
+    width: 300;
+    border: 5px solid purple;
+}
+
+#gameHero{
+    position: absolute;
+    top: 190;
+    left: 450;
+    width: 160;
+    height: 160;
+    border: 5px solid lightskyblue;
+}
+
+#points{
+    position: absolute;
+    top: 370;
+    left: 450;
     border: 5px solid purple;
 }
 
@@ -14,5 +53,6 @@
     left: 700;
     height: 300;
     width: 300;
-    background-color: red;
+    height: 50;
+    border: 5px solid orange;
 }
