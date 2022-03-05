@@ -1,7 +1,6 @@
 let questionHolder = document.getElementById("question");
 let checkAnswer = document.getElementById("enter");
 let gameBubble = document.getElementById("gameBubble");
-console.log(gameBubble)
 let answer;
 
 function createQuestion(){ 

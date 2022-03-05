@@ -2,11 +2,19 @@ let menuStart = document.getElementById("start");
 let menuExit = document.getElementById("exit");
 let menuGame = document.getElementById("gameMenu");
 
+let settingsMenu = document.getElementById("settingsMenu");
+let personalInfoMenu = document.getElementById("personalInfoMenu");
+let rulesMenu = document.getElementById("rulesMenu");
+
 function playYes(){
     if(littleMenu == "nothing"){
         menu = "game";
+        settingsMenu.style.visibility = "hidden";
+        personalInfoMenu.style.visibility = "hidden";
+        rulesMenu.style.visibility = "hidden";
         menuStart.style.visibility = "hidden"; 
         menuGame.style.visibility = "visible";
+
     }
 }
 
@@ -70,5 +78,55 @@ function showInfo(){
         table.addEventListener('animationend' , () => {
             up = false;
         });
+    }
+}
+
+
+
+let sMenu = false, piMenu = false, rMenu = false;
+function showSettings(){
+    if(!sMenu){
+        
+        sMenu = true;
+        piMenu = false;
+        rMenu = false;
+
+        rulesMenu.style.visibility = "hidden";
+        personalInfoMenu.style.visibility = "hidden";
+        settingsMenu.style.visibility = "visible";
+    }else{ 
+        sMenu = false;
+        settingsMenu.style.visibility = "hidden";
+    }
+}
+
+function showMoreInfo(){
+    if(!piMenu){
+        
+        piMenu = true;
+        sMenu = false;
+        rMenu = false;
+
+        rulesMenu.style.visibility = "hidden";
+        settingsMenu.style.visibility = "hidden";
+        personalInfoMenu.style.visibility = "visible";
+    }else{
+        piMenu = false;
+        personalInfoMenu.style.visibility = "hidden";
+    }
+}
+
+function showRules(){
+    if(!rMenu){
+        rMenu = true;
+        sMenu = false;
+        piMenu = false;
+
+        settingsMenu.style.visibility = "hidden";
+        personalInfoMenu.style.visibility = "hidden";
+        rulesMenu.style.visibility = "visible";
+    }else{
+        rMenu = false;
+        rulesMenu.style.visibility = "hidden";
     }
 }

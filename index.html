@@ -8,18 +8,34 @@
 
 <!-- Starting Menu -->
 <div id = "start">
+    <!--Background-->
     <div id = "bg">
-        <!--<img src = "Pictures/mathBackground.jpg" alt = "Cannot find yhe image">-->
+        <!--img class = "bg" src = "Pictures/startBackground.jpeg" alt = "Cannot find yhe image">-->
     </div>
-    <h id = "title">Prosveta</h>
-    <div id = "hero"></div>
-    <div id = "bubble">Are you ready for fun!</div>
-    <button id = "startYes"; onclick="playYes()">Yes</button>
-    <button id = "startNo"; onclick="playNo()">No</button>
-    <div id = "creditContainer">
-       
-        <div id = "credits">Credits</div>
+    
+    <!--Bottom Border-->
+    <div id = "emptyDiv">
+
+    </div>
+    
+    <!--Left Side-->
+    <div>
+        <h id = "title">Prosveta</h>
+    
+        <div id = "hero"></div>
+            <img class = "bubble" src = "Pictures/startBubble.png" alt = "Cannot find yhe image">
+            <p id = "bubbleText">Здравей , готов ли си за забавление?</p>
+
+        <button id = "startYes"; onclick="playYes()">Yes</button>
+        <button id = "startNo"; onclick="playNo()">No</button>
+    </div>
+
+    <!--Credit Box-->
+    <div>
+        <div id = "creditContainer">
         
+            <div id = "credits">Credits</div>
+            
             <table id = "creditsTable">
                 <tr>
                     <td> Made By</td>
@@ -38,19 +54,41 @@
                     <td> 19</td>
                 </tr>
             </table>
-           
+            
             <div id = "dropmenu"; onclick = "showInfo()">
                 <div id = "arrow1"></div>
                 <div id = "arrow2"></div>
                 <div id = "arrow3"></div>
             </div>
-        
+
+            
+        </div>
     </div>
 
-    <button id = "settings"></button>
-    <div id = "emptyDiv"></div>
-    <button id = "personalInfo" onclick = "showMoreInfo()"> </button>
-    <button id = "rules"></button>
+
+    <!--Toolbars-->
+    <div>
+        <button id = "settings" onclick = "showSettings()"></button>
+        <button id = "personalInfo" onclick = "showMoreInfo()">!</button>
+        <button id = "rules" onclick = "showRules()">?</button>
+
+        <div id = "settingsMenu">
+
+        </div>
+        
+        <div id = "personalInfoMenu">
+            <p id = "persInfo">Personal Info </p>
+            <p id = "phone">phone: 0876073834</p>
+            <p id = "email">email: ad@auxcode.com</p>
+            <p id = "city">city: Sofia / Bulgaria</p>
+        </div>
+        
+        <div id = "rulesMenu">
+            <p id = "rulesP">
+                Условията на играта са много прости. Ще ти бъдат зададени 10 въпроса , на които ти ще трябва да отговориш. Правилен отговор носи 1 точка , а грешен такъв - 0 точки.
+            </p>
+        </div>
+    </div>
 </div>
 
 <div id ="exit">

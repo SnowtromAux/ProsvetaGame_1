@@ -6,6 +6,11 @@ let curX = 0, curY = 0;
 let points = 0;
 
 function toMenu(){
+
+    if(piMenu)personalInfoMenu.style.visibility = "visible";
+    if(sMenu)settingsMenu.style.visibility = "visible";
+    if(rMenu)rulesMenu.style.visibility = "visible";
+
     menu = "start";
     menuStart.style.visibility = "visible";    
     menuGame.style.visibility = "hidden";
