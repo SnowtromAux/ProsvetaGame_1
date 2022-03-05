@@ -47,6 +47,11 @@
     width: 110;
     height: 80;
     border: 5px solid yellow;
+    font-size: 15px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 #back{
@@ -70,6 +75,8 @@
 
 #question{
     position: absolute;
+    width: 300;
+    height: 110;
     top: 15;
     left: 25;
     font-size: 30px;
@@ -85,18 +92,22 @@
 }
 
 #points{
-    top: 340;
+    top: 327.5;
     left: 450;
+    width: 300;
+    height: 50;
     border: 5px solid purple;
+    position: absolute;
+    font-size: 40px;
 }
 
 #questionaire{
     position: absolute;
-    top: 200;
-    left: 700;
+    top: 435;
+    left: 450;
     height: 300;
     width: 300;
-    height: 50;
+    height: 110;
     border: 5px solid orange;
     font-size: 30px;
     overflow: hidden;

@@ -1,4 +1,7 @@
 let questionHolder = document.getElementById("question");
+let checkAnswer = document.getElementById("enter");
+let gameBubble = document.getElementById("gameBubble");
+console.log(gameBubble)
 let answer;
 
 function createQuestion(){ 
@@ -54,7 +57,6 @@ for(let i = 0;i < fieldCount;i++){
 }
 
 
-
 let path = ["s","s","s","s","s","e","e","e","e","e"];
 
 function pathMaker(){
@@ -65,6 +67,20 @@ function pathMaker(){
         path[i] = path[j];
         path[j] = buf;
     }
+    //console.log(path);
+}
 
-    console.log(path);
+function Win(){
+    checkAnswer.disabled = true;
+}
+
+const rightText = ["Правилно!" , "Браво!"];
+const wrongText = ["Грешно!" , "Не!" , "Опитай пак!"];
+
+function PutTextBubble(right){
+    if(right){
+        gameBubble.innerHTML = rightText[Math.floor(Math.random() * rightText.length)];
+    }else{
+        gameBubble.innerHTML = wrongText[Math.floor(Math.random() * wrongText.length)];
+    }
 }

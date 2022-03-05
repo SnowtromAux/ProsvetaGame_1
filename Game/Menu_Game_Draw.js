@@ -27,12 +27,16 @@ class Grid{
     }
 }
 
+
 for(let i = 0;i < fieldCount;i++){
     grid[i] = [];
     for(let j = 0;j < fieldCount;j++){
         grid[i][j] = new Grid(startPosX + j*width , startPosY + i*height);
     }
 }
+
+
+grid[0][0].color = "green";
 
 function drawGame(){
     for(let i = 0;i < fieldCount;i++){
