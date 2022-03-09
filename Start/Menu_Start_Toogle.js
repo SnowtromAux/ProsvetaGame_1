@@ -130,3 +130,4 @@ function showRules(){
         rulesMenu.style.visibility = "hidden";
     }
 }
+

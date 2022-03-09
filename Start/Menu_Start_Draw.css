@@ -36,6 +36,7 @@ body{
 }
 
 
+
 /*Left Side*/
 #title{
     border: 5px solid purple;
@@ -51,8 +52,7 @@ body{
     position: absolute;
 }
 
-#hero{
-    border: 5px solid lightskyblue;
+.hero{
     left: 70;
     top: 190;
     width: 250;
@@ -79,26 +79,102 @@ body{
     position: absolute;
 }
 
-#startYes{
-    border: 5px solid darkgreen;
-    left: 45;
-    top: 485;
+#startYes, #startNo{
+    position: absolute;
+    
+    border: 2px solid;
+    border-radius: 10px;
+    
+    color: black;
+    
     width: 125;
     height: 70;
-    border-radius: 10px;
-    position: absolute;
+
+    text-decoration: none;
+    
+    overflow: hidden;
+
+    transition: 0.5s;
+}
+
+#startYes{
+    border-color: #25d90d;
+    left: 45;
+    top: 485;
 }
 
 #startNo{
-    border: 5px solid red;
+    border: 2px solid red;
     left: 220;
     top: 485;
-    width: 125;
-    height: 70;
-    border-radius: 10px;
-    position: absolute;
 }
 
+
+#startYes:hover{
+    color: #25d90d;
+    box-shadow: 0 0 50px #25d90d;
+    transition-delay: 0.5s;
+}
+
+#startNo:hover{
+    color: red;
+    box-shadow: 0 0 50px red;
+    transition-delay: 0.5s;
+}
+
+#startYes:before, #startNo::before{
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+#startYes:before{
+    border-top: 5px solid #25d90d;
+    border-left: 5px solid #25d90d;
+}
+
+#startNo:before{
+    border-top: 5px solid red;
+    border-left: 5px solid red;
+}
+
+#startYes:hover:before, #startNo:hover:before{
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+}
+
+#startYes:hover:after, #startNo:hover:after{
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+}
+
+#startYes:after, #startNo:after{
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+#startYes:after{
+    border-bottom: 5px solid #25d90d;
+    border-right: 5px solid #25d90d;
+}
+
+#startNo:after{
+    border-bottom: 5px solid red;
+    border-right: 5px solid red;
+}
 
 
 
