@@ -6,6 +6,7 @@ let settingsMenu = document.getElementById("settingsMenu");
 let personalInfoMenu = document.getElementById("personalInfoMenu");
 let rulesMenu = document.getElementById("rulesMenu");
 
+
 function playYes(){
     if(littleMenu == "nothing"){
         menu = "game";
@@ -17,6 +18,8 @@ function playYes(){
 
     }
 }
+
+
 
 function playNo(){
     if(littleMenu == "nothing"){
