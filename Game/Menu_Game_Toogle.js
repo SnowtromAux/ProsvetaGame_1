@@ -25,11 +25,11 @@ function check(){
     if(userAnswer.value == answer){
         PutTextBubble(true);
         points++;
-        grid[curX][curY].color = "green";
+        grid[curX][curY].style.backgroundColor = "green";
     }else{
         PutTextBubble(false);
         wrong++;
-        grid[curX][curY].color = "red";
+        grid[curX][curY].style.backgroundColor = "red";
     }
     
     if(points + wrong == 10){

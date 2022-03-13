@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="./Game/Menu_Game_Draw.css">
 </head>
 
-<canvas id = "canvas"></canvas>
-
 <!-- Starting Menu -->
 <div id = "start">
     <!--Background-->
@@ -86,6 +84,7 @@
         </div>
         
         <div id = "rulesMenu">
+            <p id = "rulesTittle">Правила</p>
             <p id = "rulesP">
                  Знайко ще ти зададе 10 въпроса , на които ти ще трябва да отговориш. Правилен отговор носи 1 точка , а грешен такъв - 0 точки.
             </p>
@@ -101,7 +100,12 @@
 
 <!-- Gaming Menu -->
 <div id="gameMenu">
-    
+    <div>
+        <img class = "gameBg"; src = "Pictures/gameBackground.jpeg" alt = "Cannot load image">
+    </div>
+
+    <div id = "container"></div>
+
     <div id = "gameTitle">Prosveta</div>
 
     <div id = "questionaire">
@@ -111,7 +115,9 @@
         <button id = "enter"; onclick = "check()">Enter</button>
     </div>
 
-    <div id = "gameHero"></div>
+    <div>
+        <img class = "gameHero"; src = "Pictures/jelly_3.png" alt = "Cannot load image">
+    </div>
     <p id = "gameBubble">Здравей , време е да поиграем!</p>
     <p id="points">Points 0 / 10</p>
 

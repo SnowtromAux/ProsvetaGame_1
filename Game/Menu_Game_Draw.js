@@ -5,43 +5,21 @@ let color = "gray";
 let borderColor = "black", borderWidth = 5;
 let fieldCount = 6;
 let grid = [];
-
-//Canvas drawing code
-class Grid{
-    constructor(x , y){
-        this.x = x;
-        this.y = y;
-        this.color = color;
-        this.borderColor = borderColor;
-        this.borderWidth = borderWidth;
-        this.width = width;
-        this.height = height;
-    }
-
-    draw(){
-        ctx.fillStyle = this.borderColor;
-        ctx.fillRect(this.x, this.y , this.width, this.height);
-
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x + this.borderWidth, this.y + this.borderWidth,this.width - 2*this.borderWidth, this.height - 2*this.borderWidth);
-    }
-}
-
+let container = document.getElementById("container")
 
 for(let i = 0;i < fieldCount;i++){
     grid[i] = [];
     for(let j = 0;j < fieldCount;j++){
-        grid[i][j] = new Grid(startPosX + j*width , startPosY + i*height);
-    }
-}
-
-
-grid[0][0].color = "green";
-
-function drawGame(){
-    for(let i = 0;i < fieldCount;i++){
-        for(let j = 0;j < fieldCount;j++){
-            grid[i][j].draw();
-        }
+     
+        grid[i][j] = document.createElement("div");
+        grid[i][j].style.position = "absolute";
+        grid[i][j].style.left = startPosX + i*width;
+        grid[i][j].style.top = startPosY + j*height;
+        grid[i][j].style.width = width;
+        grid[i][j].style.height = height;
+        if(i == 0 && j == 0) grid[i][j].style.backgroundColor = "green";
+        else grid[i][j].style.backgroundColor = color;
+        grid[i][j].style.border = borderColor + " solid " + borderWidth + "px";
+        container.append(grid[i][j]);
     }
 }
