@@ -217,11 +217,12 @@
 }
 
 #statistics{
+    background-color: palevioletred;
     border-radius: 30px;
     visibility: hidden;
-    border: 5px solid green;
+    border: 5px solid black;
     position: absolute;
-    top: 160;
+    top: 169;
     left: 450;
     width: 300;
     height: 180;
@@ -253,7 +254,9 @@
 }
 
 #bad, #medium, #good, #perfect{
-    border: 2.5px solid purple;
+    background-color: limegreen;
+    text-align: center;
+    border: 2.5px solid black;
     width: 150;
     height: 20;
     left: 10;

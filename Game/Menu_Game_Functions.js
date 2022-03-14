@@ -77,14 +77,17 @@ let medium = document.getElementById("medium");
 let good = document.getElementById("good");
 let perfect = document.getElementById("perfect");
 
+let completed = document.getElementById("gameFinish")
 function Win(){
+
+    completed.play();
     
     statisticOn = true;
 
-    if(points >= 0 && points <= 3)bad.style.borderColor = "green";
-    if(points > 4 && points <= 7)good.style.borderColor = "green";
-    if(points >= 8 && points <= 9)good.style.borderColor = "green";
-    if(points == 10)perfect.style.borderColor = "green";
+    if(points >= 0 && points <= 3)bad.style.borderColor = "yellow";
+    if(points >= 4 && points <= 7)medium.style.borderColor = "yellow";
+    if(points >= 8 && points <= 9)good.style.borderColor = "yellow";
+    if(points == 10)perfect.style.borderColor = "yellow";
     
     winTitle.innerHTML = "Резултат: " + points;
     checkAnswer.disabled = true;

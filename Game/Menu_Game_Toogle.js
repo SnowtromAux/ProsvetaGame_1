@@ -62,7 +62,8 @@ function restart(){
     curX = 0;
     curY = 0;
     checkAnswer.disabled = false;
-
+    userAnswer.value = "";
+    
     gameBubble.innerHTML = again[Math.round(Math.random()*2)];
     questionHolder.textContent = createQuestion();
     pathMaker();
