@@ -13,6 +13,10 @@ function toMenu(){
     if(rMenu)rulesMenu.style.visibility = "visible";
 
     menu = "start";
+    
+    statistics.style.visibility = "hidden";
+    gameH.style.visibility = "hidden";
+
     menuStart.style.visibility = "visible";    
     menuGame.style.visibility = "hidden";
 }
@@ -45,4 +49,23 @@ function check(){
         
     userAnswer.value = "";
     questionHolder.textContent = createQuestion();
+}
+
+let again = ["Хубаво е че играеш отново!" , "Мерси , че дойде отново", "Ще се забавляваме още"];
+function restart(){
+    statistics.style.visibility = "hidden";
+    gameH.style.visibility = "visible";
+
+    statisticOn = false;
+    points = 0;
+    wrong = 0;
+    curX = 0;
+    curY = 0;
+    checkAnswer.disabled = false;
+
+    gameBubble.innerHTML = again[Math.round(Math.random()*2)];
+    questionHolder.textContent = createQuestion();
+    pathMaker();
+    drawField();
+
 }

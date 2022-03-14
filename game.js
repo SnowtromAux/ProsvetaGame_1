@@ -1,9 +1,11 @@
 let soundsOn = true, sfxsOn = true;
+let statisticOn = false;
 let startSong = document.getElementById("music")
 let clickSound = [];
 
 questionHolder.textContent = createQuestion();
 pathMaker();
+drawField();
 
 function sfxCreate(){
     if(sfxsOn){

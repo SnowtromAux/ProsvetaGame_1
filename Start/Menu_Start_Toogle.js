@@ -7,6 +7,16 @@ let rulesMenu = document.getElementById("rulesMenu");
 
 
 function playYes(){
+
+    if(statisticOn){
+        
+        statistics.style.visibility = "visible";
+        gameH.style.visibility = "hidden";
+    }else{
+        statistics.style.visibility = "hidden";
+        gameH.style.visibility = "visible";
+    }
+
     if(sfxsOn)sfxCreate();
     settingsMenu.style.visibility = "hidden";
     personalInfoMenu.style.visibility = "hidden";

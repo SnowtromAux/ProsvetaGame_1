@@ -217,6 +217,7 @@
 }
 
 #statistics{
+    border-radius: 30px;
     visibility: hidden;
     border: 5px solid green;
     position: absolute;
@@ -228,30 +229,47 @@
 
 .winHero{
     position: absolute;
-    right: 10;
-    top: 10;
+    right: 25;
+    top: 50;
     width: 80;
     height: 80;
 }
 
+#winTittle{
+    font-size: 30px;
+    left: 70px;
+    top: -20px;
+    position: absolute;
+}
+
+#playAgain{
+    cursor: pointer;
+    top: 140;
+    left: 180;
+    width: 110;
+    height: 30;
+    position: absolute;
+    border: 5px solid green;
+}
+
 #bad, #medium, #good, #perfect{
     border: 2.5px solid purple;
-    width: 180;
+    width: 150;
     height: 20;
     left: 10;
     position: absolute;
 }
 
 #bad{
-    bottom: 70;
+    bottom: 85;
 }
 
 #medium{
-    bottom: 45;
+    bottom: 55;
 }
 
 #good{
-    bottom: 20;
+    bottom: 25;
 }
 
 #perfect{

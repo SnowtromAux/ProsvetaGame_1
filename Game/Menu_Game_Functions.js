@@ -69,8 +69,24 @@ function pathMaker(){
 }
 
 let statistics = document.getElementById("statistics");
+let winTitle = document.getElementById("winTittle")
 let gameH = document.getElementById("gameH")
+
+let bad = document.getElementById("bad");
+let medium = document.getElementById("medium");
+let good = document.getElementById("good");
+let perfect = document.getElementById("perfect");
+
 function Win(){
+    
+    statisticOn = true;
+
+    if(points >= 0 && points <= 3)bad.style.borderColor = "green";
+    if(points > 4 && points <= 7)good.style.borderColor = "green";
+    if(points >= 8 && points <= 9)good.style.borderColor = "green";
+    if(points == 10)perfect.style.borderColor = "green";
+    
+    winTitle.innerHTML = "Резултат: " + points;
     checkAnswer.disabled = true;
     gameH.style.visibility = "hidden";
     statistics.style.visibility = "visible";
