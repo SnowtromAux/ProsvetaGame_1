@@ -4,8 +4,16 @@
     <link rel="stylesheet" href="./Game/Menu_Game_Draw.css">
 </head>
 
+
+
 <!-- Starting Menu -->
 <div id = "start">
+
+    <audio autoplay loop id = "music" src="Sounds/game.mp3" type="audio/mp3" volume = 0.1></audio>
+    <audio id = "slideUp" src = "Sounds/slideUp.mp3" type ="audio/mp3"></audio>
+    <audio id = "slideDown" src = "Sounds/slideDown.mp3" type ="audio/mp3"></audio>
+
+   
     <!--Background-->
     <div id = "bg">
         <img class = "bg" src = "Pictures/startBackground.jpeg" alt = "Cannot find the image">
@@ -68,11 +76,19 @@
 
     <!--Toolbars-->
     <div>
-        <button id = "settings" onclick = "showSettings()"></button>
+        <img id = "settings" src = "Pictures/settings.png" onclick = "showSettings()">
         <button id = "personalInfo" onclick = "showMoreInfo()">!</button>
         <button id = "rules" onclick = "showRules()">?</button>
 
         <div id = "settingsMenu">
+            
+            <p id = "settingsP">Настройки</p>
+
+            <img id = "soundOn" onclick = "soundOn()" src = "Pictures/soundOn.png">            
+            <img id = "soundOff" onclick = "soundOff()" src = "Pictures/soundOff.png">
+            
+            <img id = "sfxOn" onclick = "sfxOn()" src = "Pictures/sfxOn.png">
+            <img id = "sfxOff" onclick = "sfxOff()" src = "Pictures/sfxOff.png">
 
         </div>
         
@@ -92,12 +108,6 @@
     </div>
 </div>
 
-<div id ="exit">
-    <h>Are you sure you want to exit?</h>
-    <button id = "confirmYes"; onclick = "exitYes()">Yes</button>
-    <button id = "confirmNo"; onclick = "exitNo()">No</button>    
-</div>
-
 <!-- Gaming Menu -->
 <div id="gameMenu">
     <div>
@@ -115,10 +125,22 @@
         <button id = "enter"; onclick = "check()">Enter</button>
     </div>
 
-    <div>
-        <img class = "gameHero"; src = "Pictures/jelly_3.png" alt = "Cannot load image">
+    <div id = "gameH">
+        <img class = "gameHero"; src = "Pictures/jelly_3.png"; alt = "Cannot load image">
+        <img class = "gameBubble"; src = "Pictures/inGameBubble.png"; alt = "Cannot load image">
+        <p id = "gameBubbleP">Здравей , време е да поиграем!</p>
     </div>
-    <p id = "gameBubble">Здравей , време е да поиграем!</p>
+
+    <div id = "statistics">
+        <p id = "winTittle"></p>
+        <img class = "winHero"; src = "Pictures/jelly_2.png"; alt = "Cannot load image">
+        
+        <p id = "bad"> 0-3т. - слабо</p>
+        <p id = "medium"> 4-7т. - средно</p>
+        <p id = "good">8-9т. - силно</p>
+        <p id = "perfect">10т. - перфектно</p>
+    </div>
+
     <p id="points">Points 0 / 10</p>
 
 </div>

@@ -1,6 +1,6 @@
 let questionHolder = document.getElementById("question");
 let checkAnswer = document.getElementById("enter");
-let gameBubble = document.getElementById("gameBubble");
+let gameBubble = document.getElementById("gameBubbleP");
 let answer;
 
 function createQuestion(){ 
@@ -59,7 +59,6 @@ for(let i = 0;i < fieldCount;i++){
 let path = ["s","s","s","s","s","e","e","e","e","e"];
 
 function pathMaker(){
-    
     for(let i = path.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let buf = path[i];
@@ -69,8 +68,12 @@ function pathMaker(){
     //console.log(path);
 }
 
+let statistics = document.getElementById("statistics");
+let gameH = document.getElementById("gameH")
 function Win(){
     checkAnswer.disabled = true;
+    gameH.style.visibility = "hidden";
+    statistics.style.visibility = "visible";
 }
 
 const rightText = ["Правилно!" , "Браво!"];

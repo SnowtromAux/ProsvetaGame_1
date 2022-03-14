@@ -1,5 +1,4 @@
 let menuStart = document.getElementById("start");
-let menuExit = document.getElementById("exit");
 let menuGame = document.getElementById("gameMenu");
 
 let settingsMenu = document.getElementById("settingsMenu");
@@ -8,33 +7,19 @@ let rulesMenu = document.getElementById("rulesMenu");
 
 
 function playYes(){
-    if(littleMenu == "nothing"){
-        menu = "game";
-        settingsMenu.style.visibility = "hidden";
-        personalInfoMenu.style.visibility = "hidden";
-        rulesMenu.style.visibility = "hidden";
-        menuStart.style.visibility = "hidden"; 
-        menuGame.style.visibility = "visible";
-
-    }
+    if(sfxsOn)sfxCreate();
+    settingsMenu.style.visibility = "hidden";
+    personalInfoMenu.style.visibility = "hidden";
+    rulesMenu.style.visibility = "hidden";
+    menuStart.style.visibility = "hidden"; 
+    menuGame.style.visibility = "visible";
 }
 
 
 
 function playNo(){
-    if(littleMenu == "nothing"){
-        littleMenu = "confirmExit";
-        menuExit.style.visibility = "visible";
-    }
-}
-
-function exitYes(){
+    if(sfxsOn)sfxCreate();
     window.close();
-}
-
-function exitNo(){
-    littleMenu = "nothing";
-    menuExit.style.visibility = "hidden";
 }
 
 
@@ -45,8 +30,14 @@ let dropmenu = document.getElementById("dropmenu");
 let table = document.getElementById("creditsTable");
 
 let up = false;
+
+let slideUp = document.getElementById("slideUp");
+let slideDown = document.getElementById("slideDown");
+
 function showInfo(){
+    if(sfxsOn)sfxCreate();
     if(!up){
+        if(sfxsOn)slideDown.play();
         credits.style.animationName = 'popupUp';
         credits.style.animationDuration = 2 + 's';
         credits.style.marginTop = -200 + "px";
@@ -66,6 +57,7 @@ function showInfo(){
     }
 
     if(up){
+        if(sfxsOn)slideUp.play();
         credits.style.animationName = 'popupDown';
         credits.style.animationDuration = 2 + 's';
         credits.style.marginTop = 0 + "px";
@@ -87,23 +79,56 @@ function showInfo(){
 
 
 let sMenu = false, piMenu = false, rMenu = false;
+
+let sound_On = document.getElementById("soundOn");
+let sound_Off = document.getElementById("soundOff");
+
+let sfx_On = document.getElementById("sfxOn");
+let sfx_Off = document.getElementById("sfxOff");
+
 function showSettings(){
+    if(sfxsOn)sfxCreate();
     if(!sMenu){
         
         sMenu = true;
         piMenu = false;
         rMenu = false;
 
+        if(soundsOn){
+            sound_On.style.visibility = "visible";
+            sound_Off.style.visibility = "hidden";
+        }else{
+            sound_On.style.visibility = "hidden";
+            sound_Off.style.visibility = "visible";
+        }
+
+        if(sfxsOn){
+            sfx_On.style.visibility = "visible";
+            sfx_Off.style.visibility = "hidden";
+        }else{
+            sfx_On.style.visibility = "hidden";
+            sfx_Off.style.visibility = "visible";
+        }
+
         rulesMenu.style.visibility = "hidden";
         personalInfoMenu.style.visibility = "hidden";
         settingsMenu.style.visibility = "visible";
     }else{ 
+        sound_On.style.visibility = "hidden";
+        sound_Off.style.visibility = "hidden";
+        sfx_On.style.visibility = "hidden";
+        sfx_Off.style.visibility = "hidden";
         sMenu = false;
         settingsMenu.style.visibility = "hidden";
     }
 }
 
 function showMoreInfo(){
+    if(sfxsOn)sfxCreate();
+    sound_On.style.visibility = "hidden";
+    sound_Off.style.visibility = "hidden";
+    sfx_On.style.visibility = "hidden";
+    sfx_Off.style.visibility = "hidden";
     if(!piMenu){
         
         piMenu = true;
@@ -120,6 +145,11 @@ function showMoreInfo(){
 }
 
 function showRules(){
+    if(sfxsOn)sfxCreate();
+    sound_On.style.visibility = "hidden";
+    sound_Off.style.visibility = "hidden";
+    sfx_On.style.visibility = "hidden";
+    sfx_Off.style.visibility = "hidden";
     if(!rMenu){
         rMenu = true;
         sMenu = false;
@@ -134,3 +164,34 @@ function showRules(){
     }
 }
 
+function soundOn(){
+    if(sfxsOn)sfxCreate();
+    startSong.play();
+    startSong.volume = 0;
+    soundsOn = false;
+    sound_On.style.visibility = "hidden";
+    sound_Off.style.visibility = "visible";
+}
+
+function soundOff(){
+    if(sfxsOn)sfxCreate();
+    startSong.volume = 1;
+    soundsOn = true; 
+    sound_On.style.visibility = "visible";
+    sound_Off.style.visibility = "hidden";
+}
+
+
+function sfxOn(){
+    if(sfxsOn)sfxCreate();
+    sfxsOn = false;
+    sfx_On.style.visibility = "hidden";
+    sfx_Off.style.visibility = "visible";
+}
+
+function sfxOff(){
+    if(sfxsOn)sfxCreate();
+    sfxsOn = true;
+    sfx_On.style.visibility = "visible";
+    sfx_Off.style.visibility = "hidden";
+}

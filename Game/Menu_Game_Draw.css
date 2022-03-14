@@ -16,16 +16,20 @@
 
 #gameTitle{
     border: 5px solid green;
+    border-radius: 35px;
+    font-family: cursive;
+    color: green;
     top: 40;
     left: 200;
     width: 400;
-    height: 80;
-    font-size: 75px;
+    height: 100;
+    font-size: 90px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     display: flex;
     position: absolute;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 #questionaire{
@@ -45,37 +49,52 @@
     height: 160;
 }
 
-#gameBubble{
+#gameBubbleP{
     position: absolute;
     top: 150;
     left: 640;
-    width: 110;
-    height: 80;
-    border: 5px solid yellow;
+    width: 120;
+    height: 30;
     font-size: 15px;
     overflow: hidden;
+    text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
+    position: absolute;
+    display: flex;
 }
 
+.gameBubble{
+    position: absolute;
+    top: 135;
+    left: 600;
+    width: 200;
+    height: 130;
+}
+
+
 #back{
+    border-radius: 10px;
     position: absolute;
     top: 60;
     left: 25;
     width: 115;
     height: 40;
     border: 5px solid red;
+    cursor: pointer;
 }
 
 
 #enter{
+    border-radius: 10px;
     position: absolute;
     top: 60;
     left: 165;
     width: 115;
     height: 40;
     border: 5px solid green;
+    cursor: pointer;
 }
 
 #question{
@@ -97,27 +116,144 @@
 }
 
 #points{
+    text-align: center;
+    color: purple;
     top: 327.5;
     left: 450;
     width: 300;
     height: 50;
-    border: 5px solid purple;
+    border: 5px solid black;
+    color: black;
+    background-color: purple;
+    border-radius: 20px;
     position: absolute;
     font-size: 40px;
 }
 
 #questionaire{
+    color: black;
+    border-radius: 20px;
     position: absolute;
     top: 435;
     left: 450;
     height: 300;
     width: 300;
     height: 110;
-    border: 5px solid orange;
+    border: 5px solid black;
+    background-color: orange;
     font-size: 30px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     display: flex;
     position: absolute;
+}
+
+
+#enter:hover{
+    color: #25d90d;
+    box-shadow: 0 0 50px #25d90d;
+    transition-delay: 0.5s;
+}
+
+#back:hover{
+    color: red;
+    box-shadow: 0 0 50px red;
+    transition-delay: 0.5s;
+}
+
+#enter:before, #back:before{
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+#enter:before{
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+}
+
+#back:before{
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+}
+
+#enter:hover:before, #back:hover:before{
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+}
+
+#enter:hover:after, #back:hover:after{
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+}
+
+#enter:after, #back:after{
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+#enter:after{
+    border-bottom: 2px solid green;
+    border-right: 2px solid green;
+}
+
+#back:after{
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+}
+
+#statistics{
+    visibility: hidden;
+    border: 5px solid green;
+    position: absolute;
+    top: 160;
+    left: 450;
+    width: 300;
+    height: 180;
+}
+
+.winHero{
+    position: absolute;
+    right: 10;
+    top: 10;
+    width: 80;
+    height: 80;
+}
+
+#bad, #medium, #good, #perfect{
+    border: 2.5px solid purple;
+    width: 180;
+    height: 20;
+    left: 10;
+    position: absolute;
+}
+
+#bad{
+    bottom: 70;
+}
+
+#medium{
+    bottom: 45;
+}
+
+#good{
+    bottom: 20;
+}
+
+#perfect{
+    bottom: -5;
 }

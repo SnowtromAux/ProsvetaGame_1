@@ -6,6 +6,7 @@ let curX = 0, curY = 0;
 let points = 0;
 
 function toMenu(){
+    if(sfxsOn)sfxCreate();
 
     if(piMenu)personalInfoMenu.style.visibility = "visible";
     if(sMenu)settingsMenu.style.visibility = "visible";
@@ -18,15 +19,18 @@ function toMenu(){
 
 let wrong = 0;
 function check(){
+    if(sfxsOn)sfxCreate();
     
     if(path[points+wrong] == 's')curY++;
     else curX++;
     
     if(userAnswer.value == answer){
+        correctCreate();
         PutTextBubble(true);
         points++;
         grid[curX][curY].style.backgroundColor = "green";
     }else{
+        wrongCreate();
         PutTextBubble(false);
         wrong++;
         grid[curX][curY].style.backgroundColor = "red";
